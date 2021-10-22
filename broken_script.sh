@@ -6,7 +6,7 @@ get_name_days () {
     for name in "${__names_array[@]}"
     do
         printf "%s: \n" "${name}"
-        curl "https://svatky.adresa.info/txt?name=${name}"
+        curl -s "https://svatky.adresa.info/txt?name=${name}"
         printf "\n"
     done
 }
